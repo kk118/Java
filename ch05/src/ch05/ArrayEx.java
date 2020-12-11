@@ -47,19 +47,22 @@ public class ArrayEx {
 		System.out.println("\n---arrayEx3---\n");
 		Scanner sc = new Scanner(System.in);
 		
-		int iarr1[] = new int[5];
-		int sum = 0;
-		int num = 0;
-		double avg = 0.0;
-
+		int iarr1[] = new int[5];//점수를 저장할 배열
+		int sum = 0;// 총합점수 저장 변수
+		double avg = 0.0;// 평균 점수 저장 변수
+		
+//		점수를 저장할 반복문
 		for (int i = 0; i < iarr1.length; i++) {
 			System.out.print( (i + 1) +"번째 숫자를 입력하세요 : ");
 			iarr1[i] = sc.nextInt();
 		}
+//		총합을 계산할 반복문
 		for (int j = 0; j < iarr1.length; j++) {
-			num++;
-			sum += iarr1[j];	
-			avg = sum / num;
+//			sum += iarr1[j];
+			sum =  sum + iarr1[j];	
+//		(double)sum 로 강제 형변환을 진행하여 sum값을 double형으로 변환
+//			변환된 값과 정수를 연산하면 모두 double형으로 자동 형변환 되어 연산이 진행됨
+			avg = (double)sum / iarr1.length;
 						
 		}
 		
